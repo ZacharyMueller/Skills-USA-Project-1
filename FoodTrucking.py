@@ -82,8 +82,10 @@ class DisplayFoodTruck():
                         self.error.set("Error: Enter a positive number")
                         break
                     listOfTotals.append(int(input))
+                
             self.dayTotal.set('$' + str(int(self.dayTotal.get().strip('$')) + sum(listOfTotals)))
             self.total.set('$' + str(sum(listOfTotals)))
+            self.error.set("")
         except:
             self.error.set("Error: Enter a number")
         return self.total
